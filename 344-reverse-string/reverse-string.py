@@ -4,6 +4,9 @@ class Solution(object):
         :type s: List[str]
         :rtype: None Do not return anything, modify s in-place instead.
         """
-        n=len(s)
-        for i in range(n//2):
-            s[i],s[n-1-i]=s[n-1-i],s[i]
+        i=0
+        j=len(s)-1
+        while (i < j):
+            s[i],s[j]=s[j],s[i]
+            i += 1
+            j -= 1
